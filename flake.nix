@@ -15,6 +15,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    claude-code = {
+      url = "github:sadjow/claude-code-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # COMING SOON...
     #nixvim = {
     #  url = "github:nix-community/nixvim";
@@ -22,7 +27,7 @@
     #};
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, claude-code, ... }@inputs: let
     system = "x86_64-linux";
     homeStateVersion = "24.11";
     user = "insyd";
