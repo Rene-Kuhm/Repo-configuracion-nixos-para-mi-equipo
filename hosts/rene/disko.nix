@@ -1,9 +1,9 @@
-# Esquema de particionado — SHPP41-2000GM 2 TB NVMe
+# Esquema de particionado — WDC WDS240G2G0A-00JH30 240 GB SATA SSD
 #
-# ⚠  ANTES DE USAR: verifica que el disco correcto es /dev/nvme0n1 con:
+# ⚠  ANTES DE USAR: verifica que el disco correcto es /dev/sda con:
 #      lsblk -o NAME,SIZE,MODEL,SERIAL
-#    Busca "SHPP41" o serial equivalente
-#    Si es /dev/nvme1n1, cambia "device" abajo.
+#    Busca "WDC" o "WDS240G2G0A"
+#    Si es /dev/sdb, cambia "device" abajo.
 #
 # Uso (desde NixOS live ISO):
 #   nix run github:nix-community/disko -- --mode destroy,format,mount ./disko.nix
@@ -13,7 +13,7 @@
     disk = {
       main = {
         type   = "disk";
-        device = "/dev/nvme0n1";  # SHPP41-2000GM 2TB NVMe — verificar con lsblk
+        device = "/dev/sda";  # WDC 240 GB SATA — verificar con lsblk
 
         content = {
           type = "gpt";
@@ -31,7 +31,7 @@
               };
             };
 
-            # Root (resto del disco ~1991 GB)
+            # Root (resto del disco ~239 GB)
             root = {
               size    = "100%";
               content = {

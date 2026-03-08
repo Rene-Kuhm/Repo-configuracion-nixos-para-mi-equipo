@@ -2,9 +2,9 @@
 # CPU  : Intel Core i7-14700F (20 cores / 28 threads)
 # GPU  : AMD Radeon RX 6600 XT
 # RAM  : 32 GB DDR4 Kingston 3200 MHz
-# Disk : SHPP41-2000GM 2 TB NVMe (NixOS — disco completo)
-#        WDC WDS240G2G0A-00JH30 240 GB SATA SSD  (data/backup)
-#        Lexar 240 GB SATA SSD                   (data/backup)
+# Disk : WDC WDS240G2G0A-00JH30 240 GB SATA SSD (NixOS)
+#        SHPP41-2000GM 2 TB NVMe               (Windows — no tocar)
+#        Lexar 240 GB SATA SSD                 (data/backup)
 # Net  : Realtek Gaming 2.5 GbE (r8169) + Intel AX211 Wi-Fi 6E
 #
 # NOTA: Los UUID se generan automáticamente con disko
